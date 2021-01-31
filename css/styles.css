@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+}
+
+a, button {
+    transition: all .3s ease-in-out;
+}
+
+html {
+    font-size: 10px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 40px 60px;
+}
+
+.grid-item, .grid-item-sec {
+    position: relative;
+    padding-top: 100%;
+    overflow: hidden;
+}
+
+.grid-item img, .grid-item-sec img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.grid-one {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 560px;
+    gap: 30px;
+}
+
+
+.grid-item--big {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.grid-twoo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    position: relative;
+}
+
+.grid-twoo::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(24, 24, 24, 0.7);
+}
